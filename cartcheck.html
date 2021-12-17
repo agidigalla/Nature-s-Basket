@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/bdfe5144d7.js' crossorigin='anonymous'></script>
+    <title>Document</title>
+   <link rel="stylesheet" href="cartcheck.css">
+        <style>
+.box{
+   background-color: whitesmoke;
+   display: inline-block;
+   height: 500px;
+   width: 48%;
+   margin: auto;
+   vertical-align: top;
+}
+.box1{
+   height: 270px;
+   margin-left: 10%;
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+   border-radius: 8px;
+}
+hr{
+   margin: 0;
+   padding: 0;
+}
+.prod{
+   vertical-align: top;
+   display: inline-block;
+   margin-top: 7%;
+   margin-left: 8%;
+   font-size: 20px;
+   font-weight: bold;
+   line-height: 30px;
+}
+img{
+   height:120px ;
+}
+span{
+   color: gray;
+}
+#supplier{
+   color: gray;
+   padding-left: 20px;
+}
+.box2{
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+   padding-left:30px ;
+   width: 300px;
+   margin-left: 50px;
+}
+p{
+   color: grey;
+}
+.leftA{
+   padding-left: 45px;
+   text-align: left;
+   color:rgb(189, 10, 189);
+}
+.ls{
+   padding-left: 74px;
+}
+.ld{
+   padding-left: 10px;
+}
+.lm{
+   padding-left: 26px;
+}
+button{
+   background-color: #116406;
+   border: none;
+   height: 40px;
+   width: 90%;
+   margin: auto;
+   font-size: 20px;
+   font-weight: bold;
+   border-radius:5px ;
+   color: white;
+}
+#sp{
+   color: rgb(189, 10, 189);
+}
+#t_price{
+   padding-left: 50px;
+}
+        </style>
+</head>
+<body>
+    
+
+    <!-- head html part end -->
+
+
+    <div class="container">
+        <h1 style="margin-left: 10%; padding-top: 40px;">Cart:</h1>
+        <div class="box box1">
+            <img class="prod" id="pro_img" src="https:via.placeholder.com/80x100" alt="">
+            <p class="prod" > <span id="prod_name">Product_name</span> 
+             
+              <span>Qty: </span><span id="product_qty">1</span> <br> 
+              <span>₹ </span><span class="product_price" id="product_price">180</span>
+            </p>
+         <hr>
+        </div>
+        <div class="box box2">
+            <h1>Price Details</h1>
+            <p>
+                Product Charge <span>₹</span> <span class="product_price leftA" id="t_price">180</span>
+            </p>
+            <p>
+                Delivery Charge <span class="leftA">+₹80</span>
+            </p>
+            <p>
+                COD Charge <span class="leftA ls">+₹0</span>
+            </p>
+            <p>
+                1st Order Discount <span class="leftA lm">-₹ 100</span>
+            </p>
+            <hr>
+            <h2>
+                Order Total <span>₹</span> <span id="total_price" class="leftA ld">206</span>
+            </h2>
+            <p style="font-size:13px;">Clicking on ‘Continue’ will not deduct any money</p>
+            <a href="address.html"><button>Continue</button></a>
+    
+        </div>
+    </div>
+</body>
+</html>
+<script>
+   
+
+   data = JSON.parse(localStorage.getItem("cartItem"));
+//console.log(data)
+var pro_img1 = document.querySelector("#pro_img");
+pro_img1.setAttribute("src",data.image_url)
+console.log(data.price,data.image_url,data.product_n)
+
+var pro_name = document.querySelector("#prod_name");
+pro_name.textContent=data.product_n;
+
+var pro_price = document.querySelector("#product_price");
+pro_price.textContent=data.price;
+
+var left_price = document.querySelector("#t_price");
+left_price.textContent=data.price;
+
+var total = (80+(+data.price))-100;
+var t_price = document.querySelector("#total_price");
+t_price.textContent=total;
+
+    
+</script>
