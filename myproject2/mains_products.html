@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css"> -->
+    <script src='https://kit.fontawesome.com/bdfe5144d7.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="meesho_productDetail.css">
+    <style>
+      .orignal_price{
+    text-decoration:line-through;
+    font-weight: lighter;
+    font-size: 25px;
+    color: grey;
+}
+#percentage_off{
+    color: purple;
+    font-size:25px ;
+}
+.percent{
+    color: purple;
+    font-size: 15px;
+}
+#dicount{
+    font-size: 17px;
+    color: grey;
+}
+#delivery{
+    color: grey;
+
+}
+.container{
+    display: grid;
+    gap: 20px;
+    width: 100%;
+   
+    margin-right: 10%;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: "b1 b2"
+                        "b1 b3"
+                        "b5 b4"
+                        ;
+}
+.box{
+    padding-left: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+.box1{
+    grid-area: b1;
+    
+    height: 500px;
+    border-radius: 10px;
+    
+    
+}
+.innerbox{
+    grid-area:b2 ;
+    background-color: whitesmoke;
+    
+}
+.box3{
+    grid-area:b3 ;
+    background-color: whitesmoke;
+    
+}
+.box4{
+    grid-area:b4 ;
+    
+    background-color: whitesmoke;
+}
+.addToCart{
+    grid-area: b5;
+    background-color: rgb(165, 171, 252);
+    height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+}
+#nav{
+      background-color: rgb(22, 13, 13);
+      width: 100%;
+      height: 70px;
+      margin-bottom: 100px;
+  }
+  .butt{
+      width: 10%;
+      height:95%;
+      color: white;
+      transform: translateY(-10px);
+      font-size: 20px;
+      background-color: rgb(12, 6, 6);
+      
+  }      
+  #search_nav{
+      width: 30%;
+      height: 80%;
+      border-radius: 20px;
+      transform: translateY(-15px);
+     
+  }
+  #nav_sele{
+      width: 10%;
+      height: 100%;
+      background-color: black;
+      color: white  ;
+      font-size: 26px;
+      border: 2px solid black;
+      transform: translateY(-10px);
+     
+  }
+  .butt1{
+      background-color: black;
+      margin-left: 100px;
+      height: 50%;
+      
+  }
+  #rating{
+      
+      width: 250%;
+      height: 400px;
+     
+  }
+  .heading{
+      font-size: 36px;
+  }
+  #rating_p{
+      font-size: 26px;
+  }
+
+  .heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+.fa {
+  font-size: 35px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+        
+    </style>
+</head>
+<body>
+
+    <div id="nav" >
+        <button class="butt">ASOS</button>
+        <button class="butt">WOMEN</button>
+        <button class="butt">MEN</button>
+        <input type="text" id="search_nav" placeholder="search item">
+        
+    </input>
+        <select id="nav_sele">
+
+            <option>Sign-in</option>
+            <option>Login</option>
+
+        </select>
+        <button class="butt1"> <div id="cart-icon"><a href="cart.html"><img style="width: 50px; height: 50px;"
+            src="https://tse3.mm.bing.net/th?id=OIP.CUp_ZAgqa7D87MgVjZCKRAHaHa&pid=Api&P=0&w=152&h=152"
+             alt="">
+       </a></div></button>
+        <button class="butt1"><div id="cart-icon"><a href="cart.html"><img style="width: 50px; height: 50px; ;border-radius: 200px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYXtsA4eLP6Vxtbc7kteXu6k8CP6StBMG_wA&usqp=CAU"
+                    
+            alt=""></a></div></button>
+ </div>
+ </div>
+
+
+
+
+    <div class="container">
+        <div class="box box1"><img id="product_big_img"></img> </div>
+        <div class="box innerbox">
+                <p id="product_name11" class="p_name">ABISTO Men Sports and Running Shoes </p>
+                <h3 id="product_price"><i>₹<span id="product_price11">700 </span><span class="orignal_price orignal_price11" id="orignal_price11"> 899</span></i> <span id="percentage_off">20% off</span> </h3>
+                <p id="dicount"><i class="fa fa-tags percent"></i> ₹100 discount on 1st order</p>
+                <p id="delivery">Delivery ₹80</p>
+        </div>
+
+        <div class="addToCart">Add To Cart</div>
+        <div class="box box3">
+            <h1>Select Size</h1>
+            <select name="" id="select_size">
+                <option value="">Your Size</option>
+                <option value="8">Size 8</option>
+                <option value="9">Size 9</option>
+                <option value="10">Size 10</option>
+            </select>
+            
+        </div>
+       
+        <div class="box box4">
+            <p id="product_name12" class="p_name">ABISTO Men Sports and Running Shoes </p>
+                <h3 id="product_price"><i>₹ <span id="product_price12"> 700 </span><span class="orignal_price" id="orignal_price12"> 899</span></i> <span id="percentage_off">20% off</span> </h3>
+                <p id="dicount"><i class="fas fa-tags percent"></i> ₹100 discount on 1st order</p>
+                <p id="delivery">Delivery ₹80</p>
+
+                <h3>size: <span id="select_size1">default</span> </h3>
+        </div>
+        <div id="rating">
+
+            <span class="heading">User Rating</span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<p id="rating_p">4.1 average based on 254 reviews.</p>
+<hr style="border:3px solid #f1f1f1">
+
+<div class="row">
+  <div class="side">
+    <div>5 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-5"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>150</div>
+  </div>
+  <div class="side">
+    <div>4 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-4"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>63</div>
+  </div>
+  <div class="side">
+    <div>3 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-3"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>15</div>
+  </div>
+  <div class="side">
+    <div>2 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-2"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>6</div>
+  </div>
+  <div class="side">
+    <div>1 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-1"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>20</div>
+  </div>
+</div>
+            
+        </div>
+        
+
+</div>
+
+
+</body>
+</html>
+<script>
+  var data = JSON.parse(localStorage.getItem("cartItem"));
+
+var p = document.querySelector("#product_price11");
+var p1 = document.querySelector("#product_price12");
+var d = document.querySelector("#product_name11");
+var d1 = document.querySelector("#product_name12");
+var img = document.querySelector("#product_big_img")
+
+var s = document.querySelector("#select_size");
+// s.addEventListener("load",function(){
+    
+//     var mm = document.querySelector("#select_size").value;
+// })
+
+d.textContent=data.product_n;
+d1.textContent=data.product_n;
+img.setAttribute("src",data.image_url)
+// document.querySelector("#select_size1").textContent=mm;
+
+var btn = document.querySelector(".addToCart");
+    btn.addEventListener("click",function (){ window.location.href="cartcheck.html"})
+
+
+    var Discount = Math.floor((data.price * 20) / (100));
+           
+    var orignal_price = document.querySelector("#orignal_price11");
+    var orignal_price1 = document.querySelector("#orignal_price12");
+    orignal_price.textContent=data.price;
+    orignal_price1.textContent=data.price;
+
+
+    p.textContent=(data.price - Discount);
+    p1.textContent=(data.price - Discount);
+</script>
